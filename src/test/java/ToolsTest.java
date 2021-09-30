@@ -1,5 +1,5 @@
-import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.Test;
+import tools.Game;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
@@ -10,5 +10,6 @@ public class ToolsTest {
         assertArrayEquals(Game.guessing(1234, 4321), new Integer[]{0, 4});
         assertArrayEquals(Game.guessing(1234, 1243), new Integer[]{2, 2});
         assertArrayEquals(Game.guessing(1234, 5678), new Integer[]{0, 0});
+        assertArrayEquals(Game.guessing(1234, 5643), new Integer[]{0, 2});
     }
 }
