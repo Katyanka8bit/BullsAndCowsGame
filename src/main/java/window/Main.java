@@ -185,8 +185,8 @@ public class Main {
         iconLabel.setHorizontalAlignment(SwingConstants.RIGHT);
         iconLabel.setBorder(BorderFactory.createLineBorder(Color.GREEN, 1));
         iconLabel.setText("<html>Copyright Dart Inc. 2021.<br>"
-                + "Developers:<br> &nbsp&nbsp&nbsp Lex Tutor<br>" +
-                "&nbsp&nbsp&nbsp Katyanka8bit");
+                + "Developers:<br> &nbsp&nbsp&nbsp Lex Tutor<br>" /*+
+                "&nbsp&nbsp&nbsp Katyanka8bit"*/);
         container.add(iconLabel, c);
 
         c.gridx = 1;
