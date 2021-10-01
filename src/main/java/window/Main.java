@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class Main {
@@ -43,7 +44,7 @@ public class Main {
 
     Main() {
         JFrame jfrm = new JFrame("Bulls & Cows Demo");
-        jfrm.setSize(1080, 280);
+        jfrm.setSize(1080, 300);
         jfrm.setLayout(new GridLayout(0, 1, 10, 10));
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jfrm.setResizable(false);
@@ -154,7 +155,7 @@ public class Main {
         iconLabel.setSize(new Dimension((int) (jfrm.getSize().getWidth() - 20) / 8 - 15, (int) (jfrm.getSize().getHeight() - 20) / 3 - 10));
         Image img = null;
         try {
-            img = ImageIO.read(Main.class.getResource("/icon.png"));
+            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
