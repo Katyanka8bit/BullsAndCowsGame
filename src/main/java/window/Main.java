@@ -179,7 +179,7 @@ public class Main {
 
         c.gridx = 1;
         c.gridy = 0;
-        c.gridheight = 2;
+        c.gridheight = 1;
         c.anchor = GridBagConstraints.LAST_LINE_END;
         c.insets = new Insets(10, 10, 10, 10);
         iconLabel.setHorizontalAlignment(SwingConstants.RIGHT);
