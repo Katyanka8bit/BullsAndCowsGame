@@ -21,6 +21,7 @@ public class Game {
     }
     //метод приводящий базу к изначальному виду.
     public static Map<String,Boolean> getDefaultMap(Map<String,Boolean> map){
+        map.values().stream().map(s -> s=true).count();
         return map;
     }
     //метод отсеивающий в базе неподходящие варианты в процессе обработки числа
