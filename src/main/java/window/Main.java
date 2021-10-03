@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.Objects;
@@ -99,6 +100,7 @@ public class Main {
         gamePanel.add(emptyLabel1);
         gamePanel.add(recomendationLabel);
         gamePanel.add(showRecomendationLabel);
+        mainMap = Game.getMainMap();
         showRecomendationLabel.setHorizontalAlignment(SwingConstants.CENTER);
         nextButton.addActionListener(actionEvent -> nextButtonClick());
         sitoButton.addActionListener(actionEvent -> sitoButtonClick());
@@ -140,6 +142,7 @@ public class Main {
             numberText.grabFocus();
         }
         clearComponents();
+        showRecomendationLabel.setText(Game.getRecommendation(mainMap));
 
     }
 
@@ -155,7 +158,8 @@ public class Main {
         iconLabel.setSize(new Dimension((int) (jfrm.getSize().getWidth() - 20) / 8 - 15, (int) (jfrm.getSize().getHeight() - 20) / 3 - 10));
         Image img = null;
         try {
-            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
+            img = ImageIO.read(new File("C:\\Users\\user\\IdeaProjects\\BullsAndCowsGame\\src\\main\\resource\\icon.png"));
+//            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
