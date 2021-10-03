@@ -158,8 +158,8 @@ public class Main {
         iconLabel.setSize(new Dimension((int) (jfrm.getSize().getWidth() - 20) / 8 - 15, (int) (jfrm.getSize().getHeight() - 20) / 3 - 10));
         Image img = null;
         try {
-            img = ImageIO.read(new File("C:\\Users\\user\\IdeaProjects\\BullsAndCowsGame\\src\\main\\resource\\icon.png"));
-//            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
+//            img = ImageIO.read(new File("C:\\Users\\user\\IdeaProjects\\BullsAndCowsGame\\src\\main\\resource\\icon.png"));
+            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
         } catch (IOException e) {
             e.printStackTrace();
         }
