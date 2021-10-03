@@ -19,7 +19,7 @@ public class Game {
     //метод изначально заполняющий базу всеми вариантами чисел
     public static LinkedHashMap<String, Boolean> getMainMap() {
         LinkedHashMap<String, Boolean> map = new LinkedHashMap<>();
-        for (int i = 0000; i <= 9999; i++) {
+        for (int i = 0; i <= 9999; i++) {
             int x = i;
             int a = x % 10;
             x /= 10;
@@ -29,7 +29,6 @@ public class Game {
             x /= 10;
             if (a != b && a != d && a != x && b != d && b != x && d != x) {
                 map.put(String.format("%04d", i), true);
-
             }
         }
         return map;
