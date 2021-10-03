@@ -1,6 +1,7 @@
 package tools;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Game {
@@ -17,8 +18,8 @@ public class Game {
     }
 
     //метод изначально заполняющий базу всеми вариантами чисел
-    public static Map<String, Boolean> getMainMap() {
-        Map<String, Boolean> map = new HashMap<>();
+    public static LinkedHashMap<String, Boolean> getMainMap() {
+        LinkedHashMap<String, Boolean> map = new LinkedHashMap<>();
         for (int i = 0000; i <= 9999; i++) {
             int x = i;
             int a = x % 10;
