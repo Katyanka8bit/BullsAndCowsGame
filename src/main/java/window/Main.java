@@ -159,7 +159,7 @@ public class Main {
         Image img = null;
         try {
 //            img = ImageIO.read(new File("C:\\Users\\user\\IdeaProjects\\BullsAndCowsGame\\src\\main\\resource\\icon.png"));
-            img = ImageIO.read(Objects.requireNonNull(Main.class.getResource("/icon.png")));
+            img = ImageIO.read(new File(Main.class.getResource("/icon.png").getFile()));
         } catch (IOException e) {
             e.printStackTrace();
         }
